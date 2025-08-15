@@ -1,0 +1,33 @@
+{
+  "name": "gigconnect",
+  "version": "1.0.0",
+  "description": "Hyperlocal freelance marketplace connecting clients with nearby freelancers",
+  "main": "backend/server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && nodemon server.js",
+    "client": "cd frontend && npm start",
+    "build": "cd frontend && npm run build",
+    "install-deps": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "db:migrate": "cd backend && npm run migrate",
+    "db:seed": "cd backend && npm run seed",
+    "test": "cd backend && npm test && cd ../frontend && npm test",
+    "start": "cd backend && npm start"
+  },
+  "keywords": [
+    "freelance",
+    "marketplace",
+    "hyperlocal",
+    "gig-economy",
+    "location-based"
+  ],
+  "author": "GigConnect Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
